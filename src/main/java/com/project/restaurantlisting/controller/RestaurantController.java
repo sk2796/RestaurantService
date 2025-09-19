@@ -17,7 +17,7 @@ public class RestaurantController {
     @Autowired
     private RestaurantService restaurantService;
 
-    @PostMapping("/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<RestaurantDto> getRestaurantById(@PathVariable int id) {
         RestaurantDto restaurantById = restaurantService.getRestaurantById(id);
         return ResponseEntity.ok(restaurantById);
